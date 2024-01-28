@@ -12,6 +12,7 @@ const style = {
     justifyContent: 'center',
     alignItems: 'center',
     padding: '1em',
+    color:'red',
     width: '100%',
   },
   searchContainer: {
