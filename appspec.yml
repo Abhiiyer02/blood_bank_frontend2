@@ -1,0 +1,16 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/html/your-react-app
+
+permissions:
+  - object: /var/www/html/your-react-app
+    pattern: "**"
+    owner: ec2-user
+    group: apache
+hooks:
+  AfterInstall:
+    - location: scripts/restart_server.sh
+      timeout: 300
+      runas: ec2-user
