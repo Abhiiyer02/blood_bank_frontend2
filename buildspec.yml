@@ -8,7 +8,7 @@ phases:
   build:
     commands:
       - npm run build
-      - npm run serve -s
+      - serve -s build
 
 artifacts:
   files: '**/*'
