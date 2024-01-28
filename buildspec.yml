@@ -8,7 +8,10 @@ phases:
   build:
     commands:
       - npm run build
-      - serve -s build
 
 artifacts:
   files: '**/*'
+
+post_build:
+  commands:
+    - serve -s build
